@@ -10,13 +10,13 @@ router.get('/', (req, res) => {
     {
       include: {
         model: Product,
-        attributes: ['product_name']
+        attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
       }
     }
   )
     .then(categoryData => res.json(categoryData))
     .catch(err => {
-      console.log(err);
+      // console.log(err);
       res.status(500).json(err);
     });
 });
@@ -30,12 +30,12 @@ router.get('/:id', (req, res) => {
     },
     include: {
       model: Product,
-      attributes: ['category_id']
+      attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
     }
   })
     .then(categoryData => res.json(categoryData))
     .catch(err => {
-      console.log(err);
+      // console.log(err);
       res.status(500).json(err);
     });
 });
@@ -47,7 +47,7 @@ router.post('/', (req, res) => {
   })
     .then(categoryData => res.json(categoryData))
     .catch(err => {
-      console.log(err);
+      // console.log(err);
       res.status(500).json(err);
     });
 });
@@ -70,7 +70,7 @@ router.put('/:id', (req, res) => {
       res.json(categoryData);
     })
     .catch(err => {
-      console.log(err);
+      // console.log(err);
       res.status(500).json(err);
     });
 });
@@ -90,7 +90,7 @@ router.delete('/:id', (req, res) => {
       res.json(categoryData);
     })
     .catch(err => {
-      console.log(err);
+      // console.log(err);
       res.status(500).json(err);
     });
 });
