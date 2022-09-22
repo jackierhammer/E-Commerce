@@ -23,7 +23,7 @@ After cloning the respository, run npm i in the terminal to install all npm pack
     
 After installing the necessary tools, you must insert your own .env file. An example file is provided. After adding the .env file, run node server.js in the terminal from the project directory. 
 
-Walkthrough video coming soon!!!
+![Walkthrough Video](assets/ecommerce_walkthrough.mp4)
 
 ## Contributing
 
